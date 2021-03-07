@@ -10,7 +10,6 @@ namespace CamelCase.Tests
         [InlineData("one", 1)]
         [InlineData("oneTwo", 2)]
         [InlineData("twojStaryWiniary", 3)]
-        [InlineData("", 0)]
         public void CountWordsTest(string name, int expectedNoOfWords)
         {
             int actual = CamelCase.CountWords(name);
