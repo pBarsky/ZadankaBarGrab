@@ -1,3 +1,4 @@
+using CamelCase;
 using System;
 using Xunit;
 
@@ -5,9 +6,16 @@ namespace CamelCase.Tests
 {
     public class CamelCaseTests
     {
-        [Fact]
-        public void Test1()
+        [Theory]
+        [InlineData("one", 1)]
+        [InlineData("oneTwo", 2)]
+        [InlineData("One", 1)]
+        [InlineData("", 0)]
+        public void CountWordsTest(string name, int expectedNoOfWords)
         {
+            int actual = CamelCase.CountWords(name);
+
+            Assert.Equal(expectedNoOfWords, actual);
         }
     }
 }
