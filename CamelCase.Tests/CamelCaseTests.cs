@@ -9,7 +9,7 @@ namespace CamelCase.Tests
         [Theory]
         [InlineData("one", 1)]
         [InlineData("oneTwo", 2)]
-        [InlineData("One", 1)]
+        [InlineData("twojStaryWiniary", 3)]
         [InlineData("", 0)]
         public void CountWordsTest(string name, int expectedNoOfWords)
         {
